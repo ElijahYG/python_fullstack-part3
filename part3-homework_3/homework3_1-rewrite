@@ -3,9 +3,11 @@
 __author__ = "Elijah"
 __date__ = "2017/7/5 14:01"
 
+# 导入
 import datetime
 import re
 
+# 全局变量
 GLOBAL_VAR = {'user_info': {},
               'user_name': '',
               'user_locked': [],
@@ -327,7 +329,6 @@ def draw_money(info_dict, bill_list, username):
                     bill_list.append('0')
                 elif (int(info_dict[username][1]) >= int(draw_num)):
                     info_dict[username][1] = str(int(info_dict[username][1]) - int(draw_num))
-                    # 将记录写入用户账单内存
                     bill_list.append(str(datetime.date.today()))
                     bill_list.append('0')
                     bill_list.append(draw_num)
@@ -473,7 +474,7 @@ def freeze_user(info_dict, locked_list):
     :return:
     '''
     while True:
-        print('当前存在的用户如下：\n')
+        print('当前存在的用户如下：')
         for index, i in enumerate(info_dict.keys()):
             if (index + 1) % 5 == 0:
                 print(str(i) + '\n', end='')
@@ -484,6 +485,7 @@ def freeze_user(info_dict, locked_list):
             is_sure = input('确认要冻结用户 ' + user_lock + ' ? (y/n)').strip()
             if is_sure.lower() == 'y':
                 locked_list.append(user_lock)
+                print('冻结用户 ' + user_lock + ' 成功！\n')
             elif is_sure.lower() == 'n':
                 break
             else:
@@ -503,7 +505,7 @@ def set_limit(info_dict):
     '''
     flag = False
     while True:
-        print('当前存在的用户如下：\n')
+        print('当前存在的用户如下：')
         for index, i in enumerate(info_dict.keys()):
             if (index + 1) % 5 == 0:
                 print(str(i) + '\n', end='')
