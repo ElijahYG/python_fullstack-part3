@@ -16,8 +16,7 @@
     Move：
     Feature：
     Important py file：os
-    How To：
-    操作流程如下：
+    How To：操作流程如下：
     1、程序运行后会显示出目前的配置文件信息，用户选择功能编号进入相对应功能模块
     2、添加backend信息：用户将要添加的backend所有信息用字典形式输入
        示例：{"backend": "test.oldboy.org","record":{"server name": "100.1.1.9","server ip": "100.1.1.9","weight": 20,"maxconn": 30}}
@@ -51,8 +50,7 @@
     Move：
     Feature：
     Important py file：re、time
-    How To：
-    操作流程如下：
+    How To：操作流程如下：
     1、程序运行后用户根据语句语法说明进行SQL输入，支持增、删、改、查操作，程序通过判断用户输入的字符串关键字分别进入不懂的操作模块
     2、添加SQL：以insert开头的字符串会定位置添加功能，程序会判断用户输入的表文件是否在当前目录下，若不在则提示错误
     3、删除SQL：用户输入delete关键字后系统会列出当前默认staff_table表中的行项目，用户输入相对应的编号进行删除行项目操作
@@ -80,8 +78,7 @@
     Move：
     Feature：
     Important py file：re、datetime
-    How To：
-    操作流程如下：
+    How To：操作流程如下：
     1、程序运行后用户选择以不同身份登录，用户身份or管理员身份，
     2、用户操作：进入时用户输入用户名密码进行登录，校验用户文件中是否存在，若失败3次则加入冻结名单，需要管理员才能解冻，若成功则会显示5项功能：
         ①存款：用户输入存款金额进行对应账号的存款操作，相应对将操作明细记录到账单中
