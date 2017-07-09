@@ -332,7 +332,7 @@ def draw_money(info_dict, bill_list, username):
                 continue
         elif draw_num.lower() == 'q':
             break
-        elif draw_num.isdigit() and ((int(info_dict[username][1]) + int(info_dict[username][2] - int(draw_num))) < 0):
+        elif draw_num.isdigit() and ((int(info_dict[username][1]) + int(int(info_dict[username][2]) - int(draw_num))) < 0):
             print('对不起，取款金额大于当前余额与最大额度之和，请重新输入！\n用户：' + username +
                   ' 当前余额为：' + info_dict[username][1] + '\n')
             continue
